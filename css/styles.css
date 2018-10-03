@@ -1,0 +1,75 @@
+body {
+    background-image: url("../img/topography.svg"),
+      linear-gradient(110deg, #f93d66, #6d47d9);
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    margin: 50px;
+    /* background: white; */
+    background-attachment: fixed;
+    letter-spacing: -1px;
+  }
+  .container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 10fr 2fr;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas: 
+        "content1 content1 content1"
+        "sidebar1 content2 content2"
+        "sidebar1 footer footer";
+}
+
+.items {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1 {
+    grid-area: content1;
+    background-color:#bada55;
+}
+
+.item2 {
+    grid-area: sidebar1;
+    background-color:#ff0;
+}
+
+.item3 {
+    grid-area: content2;
+    background-color:#f5f;
+}
+
+.item4 {
+    grid-area: footer;
+    background-color:goldenrod;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+    .container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr ;
+    grid-template-areas: 
+        "content1"
+        "sidebar1"
+        "content2"
+        "footer";
+    }
+    
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+    .container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 3fr 4fr 1fr;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas: 
+        "content1 content1 content1"
+        "sidebar1 content2 content2"
+        "footer footer footer";
+}
+    
+}
